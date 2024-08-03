@@ -126,7 +126,12 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 
 alias ls="eza --tree --level=1 --icons=always --no-time --no-user --no-permissions"
 
-#eval "$(fzf --zsh)"
+# Монтирование облаков к дискам
+alias mailcloud="rclone mount mailru:  ~/Mailru --daemon"
+alias yacloud="rclone mount yandex: ~/YandexDisk --daemon"
+
+eval "$(fzf --zsh)"
+
 # Set up fzf key bindings and fuzzy completion
 # source <(fzf --zsh)
 
