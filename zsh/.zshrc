@@ -129,6 +129,7 @@ alias ls="eza --tree --level=1 --icons=always --no-time --no-user --no-permissio
 # Монтирование облаков к дискам
 alias mailcloud="rclone mount mailru:  ~/Mailru --daemon"
 alias yacloud="rclone mount yandex: ~/YandexDisk --daemon"
+alias vpn="sudo openvpn --config /etc/openvpn/credentials.ovpn"
 
 eval "$(fzf --zsh)"
 
