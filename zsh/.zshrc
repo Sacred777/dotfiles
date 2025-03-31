@@ -127,8 +127,8 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 alias ls="eza --tree --level=1 --icons=always --no-time --no-user --no-permissions"
 
 # Монтирование облаков к дискам
-alias mailcloud="rclone mount mailru:  ~/Mailru --daemon"
-alias yacloud="rclone mount yandex: ~/YandexDisk --daemon"
+alias mailcl="rclone mount mailru:  ~/Mailru --daemon"
+alias yacl="rclone mount yandex: ~/YandexDisk --daemon"
 alias vpn="sudo openvpn --config /etc/openvpn/credentials.ovpn"
 
 eval "$(fzf --zsh)"
@@ -156,3 +156,14 @@ eval $(thefuck --alias)
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+ulimit -n 4096
+
+# pnpm
+export PNPM_HOME="/home/oleg/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+alias pn=pnpm
+# pnpm end
