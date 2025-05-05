@@ -130,6 +130,8 @@ alias ls="eza --tree --level=1 --icons=always --no-time --no-user --no-permissio
 alias mailcl="rclone mount mailru:  ~/Mailru --daemon"
 alias yacl="rclone mount yandex: ~/YandexDisk --daemon"
 alias vpn="sudo openvpn --config /etc/openvpn/credentials.ovpn"
+alias vpn-on='sudo wg-quick up wg0'
+alias vpn-off='sudo wg-quick down wg0'
 
 eval "$(fzf --zsh)"
 
